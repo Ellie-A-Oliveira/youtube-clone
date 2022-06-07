@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@use "~./reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-light-gray: hsl(0, 0%, 40%);
+  --clr-dark-gray: hsl(0, 0%, 10%);
+  --clr-black: hsl(0, 0%, 1%);
+  --clr-red: hsl(0, 100%, 50%);
+  --ff: "Roboto", sans-serif;
+}
+
+body {
+  --clr-verified-channel-svg: var(--clr-light-gray);
+  --clr-video-stats: var(--clr-light-gray);
+  --clr-text: var(--clr-black);
+  --font-family: var(--ff);
+
+  font-family: var(--font-family);
+  color: var(--clr-text);
+}
+
+.verified-channel-svg {
+  fill: var(--clr-verified-channel-svg);
+}

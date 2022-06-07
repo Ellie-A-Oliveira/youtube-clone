@@ -1,0 +1,65 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 325px;
+}
+
+.card-bottom {
+  --img-size: 2.5rem;
+  --gap: 0.7rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-right: var(--img-size);
+
+  .card-bottom-title {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    font-weight: 500;
+    font-size: 0.9em;
+    line-height: 1.59;
+
+    img {
+      width: var(--img-size);
+      height: var(--img-size);
+      border-radius: 50%;
+    }
+  }
+
+  .card-bottom-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    padding-left: calc(var(--gap) + var(--img-size));
+    font-size: 0.8em;
+    color: var(--clr-video-stats);
+
+    .video-stats {
+      display: flex;
+      gap: 0.4em;
+
+      .number-of-views::after {
+        padding-left: 4px;
+        content: "•";
+        width: 2px;
+        height: 2px;
+      }
+    }
+  }
+}
+
+.channel-name {
+  display: inline-block;
+
+  .verified-channel-icon {
+    --size: 1em;
+
+    margin-bottom: -0.15em;
+    display: inline-block;
+    width: var(--size);
+    height: var(--size);
+  }
+}
