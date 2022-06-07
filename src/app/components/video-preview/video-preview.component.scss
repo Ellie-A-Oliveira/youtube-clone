@@ -1,3 +1,24 @@
-.video-preview-img {
-  width: 100%;
+.video-preview {
+  position: relative;
+
+  .video-preview-img {
+    width: 100%;
+  }
+
+  .video-duration {
+    --video-duration-width: fit-content;
+
+    position: absolute;
+    bottom: 4%;
+    right: 0.5%;
+
+    width: var(--video-duration-width);
+    padding: 0.2rem;
+
+    background-color: var(--clr-bg-video-duration);
+    color: var(--clr-text-inverted);
+    opacity: 0.8;
+    border-radius: 2px;
+    font-size: 0.9em;
+  }
 }
