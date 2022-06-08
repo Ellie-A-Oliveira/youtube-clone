@@ -4,19 +4,26 @@
 
 :root {
   --clr-white: hsl(0, 0%, 100%);
-  --clr-light-gray: hsl(0, 0%, 40%);
-  --clr-dark-gray: hsl(0, 0%, 10%);
+  --clr-gray-200: hsl(0, 0%, 60%);
+  --clr-gray-400: hsl(0, 0%, 40%);
+  --clr-gray-800: hsl(0, 0%, 10%);
   --clr-black: hsl(0, 0%, 1%);
   --clr-red: hsl(0, 100%, 50%);
   --ff: "Roboto", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-  --clr-verified-channel-svg: var(--clr-light-gray);
-  --clr-video-stats: var(--clr-light-gray);
-  --clr-bg-video-duration: var(--clr-black);
+  --clr-verified-channel-svg: var(--clr-gray-400);
+  --clr-video-stats: var(--clr-gray-400);
+  --clr-bg: var(--clr-black);
+  --clr-bg-inverted: var(--clr-white);
   --clr-text: var(--clr-black);
   --clr-text-inverted: var(--clr-white);
+  --clr-border: var(--clr-gray-200);
   --font-family: var(--ff);
 
   font-family: var(--font-family);
@@ -27,4 +34,21 @@ body {
 
 .verified-channel-svg {
   fill: var(--clr-verified-channel-svg);
+}
+
+.pill {
+  height: 2.5em;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 16px;
+  width: max-content;
+}
+
+.pill.selected {
+  background-color: var(--clr-bg);
+  color: var(--clr-text-inverted);
+}
+
+button {
+  cursor: pointer;
 }

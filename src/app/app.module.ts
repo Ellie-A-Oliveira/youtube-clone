@@ -9,6 +9,8 @@ import { VideoCardComponent } from './components/video-card/video-card.component
 import { NavbarSuggestedTopicsComponent } from './components/navbar-suggested-topics/navbar-suggested-topics.component';
 import { VideoPreviewComponent } from './components/video-preview/video-preview.component';
 import { VideosService } from './services/videos.service';
+import { UserService } from './services/user.service';
+import { VideoCategoryComponent } from './components/video-category/video-category.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { VideosService } from './services/videos.service';
     VideoCardComponent,
     NavbarSuggestedTopicsComponent,
     VideoPreviewComponent,
+    VideoCategoryComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [VideosService],
+  providers: [VideosService, UserService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
